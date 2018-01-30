@@ -19,7 +19,7 @@ print('Sampling freq[Hz]: %f',raw_eeg.info['sfreq'])
 
 #get data as numpy array
 eeg,time = raw_eeg[:,:]
-
+fs = raw_eeg.info['sfreq']
 #plot some channels
 
 plt.plot(time,eeg[:3,:].T)
